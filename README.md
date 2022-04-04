@@ -1,6 +1,9 @@
 # Envsubst Action 
 
-This action allows you to substitute environment variables in a file.
+This action allows you to substitute environment variables in files.
+
+Will replace all $VAR / ${VAR} strings in defined files. Replacement value is taken from Environmental variables if found or empty if not.
+This defualt behaviour can be overriden by "variables" option listed at the end of this file.
 
 ## Usage
 
@@ -9,7 +12,7 @@ deployment.json (BEFORE)
 ```json
 {
   "version": "${VERSION}",
-  "instance": "${INSTANCE}"
+  "instance": "$INSTANCE"
 }
 ```
 
