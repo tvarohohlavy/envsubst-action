@@ -8,6 +8,9 @@ inputs:
   files:
     description: 'Files to run substitutions on'
     required: true
+  variables:
+    description: 'Variables that you want to replace. All if not defined.'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
