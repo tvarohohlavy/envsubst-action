@@ -4,13 +4,14 @@ This action allows you to substitute environment variables in a file.
 
 ## Usage
 
-template.json
+deployment.json
 ```json
 {
   "version": "${VERSION}",
   "instance": "${INSTANCE}"
 }
 ```
+
 
 .github/workflows/pipeline.yaml
 ```yaml
@@ -19,8 +20,9 @@ template.json
       VERSION: 1.2.3
       INSTANCE: staging
   with:
-    input: template.json
-    output: deployment.json
+    files: |
+      namespace.yaml
+      deployment.json
 ```
 
 
