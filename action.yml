@@ -5,11 +5,8 @@ branding:
   icon: 'terminal'
   color: 'yellow'
 inputs:
-  input:
-    description: 'File to run substitutions on'
-    required: true
-  output:
-    description: 'File to write result to'
+  files:
+    description: 'Files to run substitutions on'
     required: true
 runs:
   using: 'docker'
